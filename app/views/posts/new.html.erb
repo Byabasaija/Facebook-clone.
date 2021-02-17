@@ -1,0 +1,14 @@
+<div class="col-md-6 mx-auto">
+  <h1 class="center bold">Whats on your mind?</h1>
+  <p>Create a new post for your friends to spy on</p>
+
+  <%= form_for(@post) do |f| %>
+      <%= render "devise/shared/error_messages", resource: @post %>
+      <div class="form-group">
+        <%= f.text_area :content, class:"form-control" %><br />
+      </div>
+      <div>
+        <%= f.submit 'New Post', class:"btn btn-secondary col-md-3"%>
+      </div>
+  <% end %>
+</div>

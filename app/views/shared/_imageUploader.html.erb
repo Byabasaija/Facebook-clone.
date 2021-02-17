@@ -1,0 +1,15 @@
+<div class="modal-body">
+  <h5 class="modal-title" id="imageUploadModalLabel"> Change Profile
+  Picture </h5>
+  <%= form_for(object, html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: object %>
+    <div class="field">
+      <%= f.label :Profile_image %><br />
+      <%= f.file_field :image, accept:
+      'image/jpeg,image/gif,image/png' %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
+  <% end %>
+</div>

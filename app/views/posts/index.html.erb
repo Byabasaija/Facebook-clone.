@@ -1,0 +1,10 @@
+<h1> Timeline - My posts and my friends posts</h1>
+<div class="center font-raleway ">
+  <%= link_to new_post_path, class: "btn btn-secondary" do%>
+    New Post?
+  <%end%>
+</div>
+
+<% @all_posts.each do |p|%>
+  <%= render 'posts/post_layout', object: p %>
+<% end %>
